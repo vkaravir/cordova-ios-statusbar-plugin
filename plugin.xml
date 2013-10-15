@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.villekaravirta.cordova-ios-statusbar-plugin"
+      version="0.1.0">
+    <name>CordovaStatusBarPlugin</name>
+    <description>StatusBar show/hide/toggle, style, and size plugin for iOS</description>
+    <license>MIT</license>
+    <keywords>phonegap,ios,statusbar,show,hide,size,style</keywords>
+
+
+    <js-module src="www/statusbar.js" name="StatusBar">
+    	<clobbers target="window.StatusBar" />
+    </js-module>
+ 
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="StatusBar">
+                <param name="ios-package" value="StatusBar"/>
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UIViewControllerBasedStatusBarAppearance"><false/></config-file>
+        <header-file src="src/ios/StatusBar.h" />
+        <source-file src="src/ios/StatusBar.m" />
+    </platform>  
+</plugin>
