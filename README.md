@@ -4,6 +4,9 @@ cordova-ios-statusbar-plugin
 A simple plugin for Cordova 3+ on iOS to control the statusbar. It allows you to show/hide/toggle
 the statusbar, as well as change the style and get the height of the bar.
 
+**Note:** A day after I published this code, I found the other
+[StatusBar Plugin](https://github.com/apache/cordova-labs/tree/plugins/statusbar) by the Cordova team, so you
+might want to use that instead.
 
 ## Installation
 
